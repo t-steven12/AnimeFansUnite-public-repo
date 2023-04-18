@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Favorite_anime</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="fav_animesAJAX.js"></script>
+</head>
+<body>
+    <h1>Anime Fans Unite *PLEASE TEST ON CHROME</h1>
+    <ul>
+        <li><a href="index.html">Users</a></li>
+        <li><a href="Favorite_anime.html">Users' Favorited Animes</a></li>
+        <li><a href="Animes.html">Animes</a></li>
+        <li><a href="Titles.html">Titles</a></li>
+        <li><a href="Artists.html">Artists</a></li>
+    </ul>
+    <h2>ADD NEW/DISPLAY Users' Favorite Animes</h2>
+    <figure>
+        <img src="https://bvwnews.com/wp-content/uploads/2019/05/e57743ccf31dbd4187699e61c4c553aa6961ffc2_hq.jpg" width="400">
+        <figcaption>Image sourced from<br><a href="https://bvwnews.com/uncategorized/2019/05/15/anime-manga-review/">Spotlight! (Official Student Online Student Newspaper of BV West)</a></figcaption>
+    </figure>
+    <h3>The Users' Favorited Animes page regulates the Fav_animes table.</h3>
+    <p>
+        This page displays a table of all animes favorited by a user. <br>
+        The Fav_animes table bridges the M:M relationship between Users <br>
+        and Animes. A user can view a user's favorite animes by searching their <br>
+        user ID. "User's Favorite Animes" is to be populated by the search results. <br>
+        An admin/User can also favorite an anime by submitting a User ID and <br>
+        Anime ID in the section below. This inserts a row into the Fav_animes table.<br>
+        Deleting a User will remove all of the deleted User's associated rows in <br>
+        the Fav_animes table. The associated Animes of the removed rows will be unaffected.
+    </p>
+    <fieldset>
+        <legend>Favorite an Anime</legend>
+        <form action="fav_animesAJAX.js" method="post">
+            <label for="userIdFav">User ID:</label>
+            <input list="uIdList1" id="userIdFav">
+                <datalist id="uIdList1"></datalist>
+            <label for="animeIdToFav">Anime ID:</label>
+            <input list="animeIdList" id="animeIdToFav">
+                <datalist id="animeIdList"></datalist>
+            <input type="submit" id="favoriteAnAnime">
+        </form>
+    </fieldset>
+    <fieldset>
+        <legend>View a User's Favorite Animes</legend>
+        <form action="fav_animesAJAX.js" method="post">
+            <label for="userId">User ID:</label>
+            <input list="uIdList2" id="userId">
+                <datalist id="uIdList2"></datalist>
+            <input type="submit" id="viewFavs">
+        </form>
+    </fieldset>
+    <table id="userFavTable">
+        <caption><b>User's Favorite Animes</b></caption>
+        <thead>
+            <th>User ID</th>
+            <th>Anime ID</th>
+            <th>Anime Title</th>
+            <th>Air Date</th>
+        </thead>
+        <tbody id="userFavAnimes">
+        </tbody>
+    </table>
+</body>
+</html>

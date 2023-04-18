@@ -1,0 +1,25 @@
+{
+  "name": "AnimeFansUnite",
+  "version": "1.0.0",
+  "description": "",
+  "main": "afuServer.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "forever": "^4.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/t-steven12/AnimeFansUnite.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/t-steven12/AnimeFansUnite/issues"
+  },
+  "homepage": "https://github.com/t-steven12/AnimeFansUnite#readme"
+}

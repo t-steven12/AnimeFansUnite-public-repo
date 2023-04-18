@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Titles</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="titlesAJAX.js"></script>
+</head>
+<body>
+  <h1>Anime Fans Unite *PLEASE TEST ON CHROME</h1>
+  <ul>
+    <li><a href="index.html">Users</a></li>
+    <li><a href="Favorite_anime.html">Users' Favorited Animes</a></li>
+    <li><a href="Animes.html">Animes</a></li>
+    <li><a href="Titles.html">Titles</a></li>
+    <li><a href="Artists.html">Artists</a></li>
+  </ul>
+  <h2>ADD NEW/DISPLAY/UPDATE Titles</h2>
+  <figure>
+    <img src="https://blog.onehallyu.com/wp-content/uploads/2017/04/anime.jpg" width="400">
+    <figcaption>Image sourced from<br><a href="https://blog.onehallyu.com/first-impressions-of-a-new-anime-fan/">OH! Press</a></figcaption>
+  </figure>
+  <h3>The Titles page regulates the Titles table.</h3>
+  <p>
+    This page displays a table of all available Anime Titles and their associated Artists.<br>
+    An Anime Title can be added by submitting the Anime Title and the name of the Artist.<br>
+    For a Title to be successfully added, the entered Artist must exist in the database. <br>
+    The Artist of a Title can be updated by entering the desired Title and Artist in the<br>
+    "Update Artist" form. The relationship between Titles and Artists is NULLable.<br>
+    If the administrator/user does not enter an Artist upon adding a new Title or updating an<br>
+    existing Title, the Artist for that Title will be NULL.
+  </p>
+  <fieldset>
+    <legend style="font-weight: bold">Add Titles</legend>
+    <form>
+      <label for="title">Anime Title:</label>
+      <input type="text" id="title">
+      <label for="artistName">Artist Name:</label>
+      <input list="artistOptions" id="artistName">
+        <datalist id="artistOptions"></datalist>
+      <input type="submit" id="addTitles">
+    </form>
+  </fieldset><br>
+    <form id="updateArtist">
+      <legend style="font-weight: bold">Update Artist</legend>
+      <label for="titleToEdit">Anime Title:</label>
+      <input type="text" id="titleToEdit"><br>
+      <label for="newArtist">New Artist:</label>
+      <input list="newArtistOptions" id="newArtist">
+        <datalist id="newArtistOptions"></datalist><br>
+      <input type="submit" id="editArtist">
+    </form>
+    <table id="titlesTable">
+      <caption><b>Anime Titles</b></caption>
+      <thead>
+        <th>Titles</th>
+        <th>Artists</th>
+      </thead>
+      <tbody id="titlesBody"></tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Anime Fans Unite</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="usersAJAX.js"></script>
+</head>
+<body>
+    <h1>Anime Fans Unite *PLEASE TEST ON CHROME</h1>
+    <ul>
+        <li><a href="index.html">Users</a></li>
+        <li><a href="Favorite_anime.html">Users' Favorited Animes</a></li>
+        <li><a href="Animes.html">Animes</a></li>
+        <li><a href="Titles.html">Titles</a></li>
+        <li><a href="Artists.html">Artists</a></li>
+    </ul>
+    <h2>ADD NEW/DELETE/DISPLAY Users</h2>
+    <h3>The Users page regulates the Users table.</h3>
+    <p>
+        This page shows a list of all current users of Anime Fans Unite as a table.<br>
+        New users can be added by submitting a new user's first name and last name. <br>
+        Users can be deleted. Deleting a User will remove all of the User's associated <br>
+        rows in the Fav_animes composite table representing the M:M relationship between<br>
+        Users and Animes. The Animes associated with the removed rows in Fav_animes will <br>
+        not be affected by User deletion.
+    </p>
+    <fieldset>
+        <legend>Add Users</legend>
+        <form>
+            <label for="firstName">First name:</label>
+            <input type="text" id="firstName">
+            <label for="lastName">Last name:</label>
+            <input type="text" id="lastName">
+            <input type="submit" id="addUser">
+        </form>
+    </fieldset>
+        <form action="usersAJAX.js" method="post" id="deleteUsers">
+            <legend style="font-weight: bold">Delete Users</legend>
+            <label for="u_id">User ID:</label>
+            <input type="text" id="u_id">
+            <input type="submit" id="delUser">
+        </form>
+        <table id="usersTable">
+            <caption><b>All Users</b></caption>
+            <thead>
+                <th>User ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+            </thead>
+            <tbody id="usersBody">
+            </tbody>
+        </table>
+</body>
+</html>

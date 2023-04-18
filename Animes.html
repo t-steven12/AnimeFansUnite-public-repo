@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Animes</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="animesAJAX.js"></script>
+</head>
+<body>
+    <h1>Anime Fans Unite *PLEASE TEST ON CHROME</h1>
+    <ul>
+        <li><a href="index.html">Users</a></li>
+        <li><a href="Favorite_anime.html">Users' Favorited Animes</a></li>
+        <li><a href="Animes.html">Animes</a></li>
+        <li><a href="Titles.html">Titles</a></li>
+        <li><a href="Artists.html">Artists</a></li>
+    </ul>
+    <h2>ADD NEW/DISPLAY Animes</h2>
+    <figure>
+        <img src="https://pbs.twimg.com/media/EvmBT7jVEAAGpUo?format=jpg&name=large" width="200">
+        <figcaption>Image sourced from<br><a href="https://twitter.com/SHAMANKING_PR/status/1367278619643441154">Shaman King Official Twitter</a></figcaption>
+    </figure>
+    <h3>The Animes page regulates the Animes table.</h3>
+    <p>
+        This page shows all anime currently in the database along with their <br>
+        associated Title, Artist, and Air Date. The entered Title must exist <br>
+        in the database in order to succesfully add a new Anime. Two Animes <br>
+        with the same Title cannot have the same Air Date.
+    </p>
+
+    <fieldset>
+        <legend>Add Animes</legend>
+        <form action="artistsAJAX.js" method="post">
+            <label for="titlesList">Anime Title:</label>
+            <input list="titleOptions" id="titlesList">
+                <datalist id="titleOptions"></datalist><br>
+            <label for="airDate">Anime Air Date:</label>
+            <input type="date" id="airDate"><br>
+            <input type="submit" id="addAnime">
+        </form>
+    </fieldset>
+        <table id="animeTable">
+            <caption><b>Animes</b></caption>
+            <thead>
+                <th>Anime ID</th>
+                <th>Title</th>
+                <th>Artist</th>
+                <th>Air Date</th>
+            </thead>
+            <tbody id="animeList"></tbody>
+        </table>
+    </fieldset>
+</body>
+</html>

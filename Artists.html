@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Artists</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="artistsAJAX.js"></script>
+</head>
+<body>
+    <h1>Anime Fans Unite *PLEASE TEST ON CHROME</h1>
+    <ul>
+        <li><a href="index.html">Users</a></li>
+        <li><a href="Favorite_anime.html">Users' Favorited Animes</a></li>
+        <li><a href="Animes.html">Animes</a></li>
+        <li><a href="Titles.html">Titles</a></li>
+        <li><a href="Artists.html">Artists</a></li>
+    </ul>
+    <h2>ADD NEW/DISPLAY Artists</h2>
+    <figure>
+        <img src="https://www.indiewire.com/wp-content/uploads/2014/02/the-films-of-hayao-miyazaki.jpg" width="400">
+        <figcaption>Image sourced from<br><a href="https://www.indiewire.com/feature/best-miyazaki-movies-ranking-animation-films-88842/">IndieWire</a></figcaption>
+    </figure>
+    <h3>The Artists page regulates the Artists table.</h3>
+    <p>
+      This page shows all currently existing anime Artists in a table.<br>
+      New Artists can be added by submitting their first and last names.<br>
+        No two Artists can have the same first and last names. Only the <br>
+        first name field is required to add a new Artist.
+    </p>
+    <fieldset>
+      <legend>Add Artists</legend>
+      <form>
+        <label for="fname">First name:</label>
+        <input type="text" id="fname">
+        <label for="lname">Last name:</label>
+        <input type="text" id="lname">
+        <input type="submit" id="addArtists">
+      </form>
+    </fieldset><br>
+      <table id="artistsTable">
+        <caption><b>Artists</b></caption>
+        <thead>
+          <th>Artist ID</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+        </thead>
+        <tbody id="artistsBody"></tbody>
+      </table>
+</body>
+</html>
