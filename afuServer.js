@@ -10,7 +10,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cors());
 
-app.set('port', 41989);
+app.set('port', 3000);
 
 //The following app.get, app.post, app.put, and app.delete handlers are adapted from the handlers in the helloMysql.js from Justin Wolford's "CS290-Server-Side-Examples" @ https://github.com/wolfordj/CS290-Server-Side-Examples/blob/master/express-mysql/helloMysql.js
 //Additionally, any handlers with nested pool queries are adapted from Derth Adams's answer on Ed for CS290 @ https://edstem.org/us/courses/5175/discussion/477454
@@ -293,7 +293,7 @@ app.delete('/delUsers',function(req,res,next){
 
 //The following app.listen is based on the app.listen in the helloMysql.js from Justin Wolford's "CS290-Server-Side-Examples" @ https://github.com/wolfordj/CS290-Server-Side-Examples/blob/master/express-mysql/helloMysql.js
 app.listen(app.get('port'), function(){
-    console.log('Server online @ http://flip3.engr.oregonstate.edu:' + app.get('port') + '; press Ctrl-C to terminate.');
+    console.log('Server online @ localhost:' + app.get('port') + '; press Ctrl-C to terminate.');
 });
 
 
